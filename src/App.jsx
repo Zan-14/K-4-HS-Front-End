@@ -1,11 +1,13 @@
-function App() {
+import Footer from "./components/Footer/Footer";
+import Navbar from "./components/Navbar/Navbar";
 
+function App() {
   return (
     <>
-    <h1 className='bg-black text-white'>Halo</h1>
-    <p>Guys</p>
+      <Navbar />
+      <Footer />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
