@@ -1,16 +1,17 @@
+import { Link } from "react-router-dom";
+
 const Footer = () => {
   return (
     <div>
-      {" "}
       <footer className="bg-gray-800 px-4 py-5 text-gray-400 font-montserrat">
         <div className="flex flex-col gap-4 md:flex-row md:justify-around md:py-8">
           <div>
             <h2 className="text-lg text-slate-50 mb-2">Perusahaan</h2>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="hover:text-slate-50">
+                <Link to="index" className="hover:text-slate-50">
                   Beranda
-                </a>
+                </Link>
               </li>
               <li>
                 <a href="#" className="hover:text-slate-50">
