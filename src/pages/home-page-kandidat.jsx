@@ -1,7 +1,11 @@
+import { HomeSearchSectionKandidat } from "../components/Main/Kandidat/home-search-section";
+import { NavbarKandidat } from "../components/Navbar/Navbar";
+
 const HomePageKandidat = () => {
   return (
     <div>
-      <img src="public/assets/HomeBanner.png" alt="home-banner" />
+      <NavbarKandidat />
+      <HomeSearchSectionKandidat />
     </div>
   );
 };
