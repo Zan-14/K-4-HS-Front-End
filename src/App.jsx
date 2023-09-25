@@ -1,11 +1,16 @@
-function App() {
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import HomePageKandidat from "./pages/home-page-kandidat";
 
+function App() {
   return (
     <>
-    <h1 className='bg-black text-white'>Halo</h1>
-    <p>Guys</p>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" Component={HomePageKandidat} />
+        </Routes>
+      </BrowserRouter>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
