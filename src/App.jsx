@@ -1,13 +1,14 @@
-import { BrowserRouter } from "react-router-dom";
-import { NavbarKandidat } from "./components/Navbar/Navbar";
-import { FooterKandidat } from "./components/Footer/Footer";
-
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import NotFound from "./pages/404";
+import HomePageKandidat from "./pages/home-page-kandidat";
 const App = () => {
   return (
-    <BrowserRouter>
-      <NavbarKandidat />
-      <FooterKandidat />
-    </BrowserRouter>
+    <Router>
+      <Routes>
+        <Route path="*" element={<NotFound />} />
+        <Route path="/kandidat" element={<HomePageKandidat />} />
+      </Routes>
+    </Router>
   );
 };
 
