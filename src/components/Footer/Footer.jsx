@@ -242,11 +242,29 @@ export default Footer;
 export const FooterKandidat = () => {
   // Unduh Aplikasi dropdown button
   const [hideUnduhAplikasi, setHideUnduhAplikasi] = useState(true);
+  // Mitra International dropdown button
+  const [hideMitra, setHideMitra] = useState(true);
+  // Media Sosial dropdown button
+  const [hideMedia, setHideMedia] = useState(true);
+
+  // Functions
   const handleClickUnduh = () => {
     {
       hideUnduhAplikasi
         ? setHideUnduhAplikasi(false)
         : setHideUnduhAplikasi(true);
+    }
+  };
+
+  const handleClickMitra = () => {
+    {
+      hideMitra ? setHideMitra(false) : setHideMitra(true);
+    }
+  };
+
+  const handleClickMedia = () => {
+    {
+      hideMedia ? setHideMedia(false) : setHideMedia(true);
     }
   };
 
@@ -320,7 +338,7 @@ export const FooterKandidat = () => {
                       className="flex items-center gap-2 hover:text-black hover:underline"
                     >
                       Unduh Aplikasi{" "}
-                      <span>
+                      <span className="rotate-180">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width="15"
@@ -329,7 +347,7 @@ export const FooterKandidat = () => {
                           fill="none"
                         >
                           <path
-                            d="M0.633572 5L0 4.5075L5 0L10 4.5075L9.36643 5L5 1.06375L0.633572 5Z"
+                            d="M9.36643 0L10 0.4925L5 5L0 0.4925L0.633571 0L5 3.93625L9.36643 0Z"
                             fill="#828282"
                           />
                         </svg>
@@ -407,7 +425,7 @@ export const FooterKandidat = () => {
             </ul>
           </div>
           {/* Tentang JobStreet */}
-          <div>
+          <div className="w-64 ">
             <h2 className="text-lg text-black mb-2 font-bold">
               Tentang JobStreet
             </h2>
@@ -422,11 +440,98 @@ export const FooterKandidat = () => {
                   Berkarier JobStreet
                 </a>
               </li>
-              <li>
-                <a href="#" className="hover:text-black hover:underline">
-                  Mitra International
-                </a>
-              </li>
+              {/* Mitra Dropdown */}
+              {hideMitra ? (
+                <li>
+                  <button
+                    onClick={() => handleClickMitra()}
+                    className="flex items-center gap-2 hover:text-black hover:underline"
+                  >
+                    Mitra International{" "}
+                    <span>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="15"
+                        height="10"
+                        viewBox="0 0 10 5"
+                        fill="none"
+                      >
+                        <path
+                          d="M9.36643 0L10 0.4925L5 5L0 0.4925L0.633571 0L5 3.93625L9.36643 0Z"
+                          fill="#828282"
+                        />
+                      </svg>
+                    </span>
+                  </button>
+                </li>
+              ) : (
+                <li>
+                  <div className="flex flex-col gap-2">
+                    <button
+                      onClick={() => handleClickMitra()}
+                      className="flex items-center gap-2 hover:text-black hover:underline"
+                    >
+                      Mitra International{" "}
+                      <span className="rotate-180">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="15"
+                          height="10"
+                          viewBox="0 0 10 5"
+                          fill="none"
+                        >
+                          <path
+                            d="M9.36643 0L10 0.4925L5 5L0 0.4925L0.633571 0L5 3.93625L9.36643 0Z"
+                            fill="#828282"
+                          />
+                        </svg>
+                      </span>
+                    </button>
+                    <div className="flex flex-col gap-2">
+                      <Link>
+                        <button className="pl-5 hover:text-black items-center hover:underline">
+                          Bdjobs (Bangladesh)
+                        </button>
+                      </Link>
+                      <Link>
+                        <button className="pl-5 hover:text-black items-center hover:underline">
+                          Catho (Brazil)
+                        </button>
+                      </Link>
+                      <Link>
+                        <button className="pl-5 hover:text-black items-center hover:underline">
+                          JobsDB (SE Asia)
+                        </button>
+                      </Link>
+                      <Link>
+                        <button className="pl-5 hover:text-black items-center hover:underline">
+                          Jora (Hong Kong)
+                        </button>
+                      </Link>
+                      <Link>
+                        <button className="pl-5 hover:text-black items-center hover:underline">
+                          OCC Mundial (Mexico)
+                        </button>
+                      </Link>
+                      <Link>
+                        <button className="pl-5 hover:text-black items-center hover:underline">
+                          Seaman Jobsite (Philippines)
+                        </button>
+                      </Link>
+                      <Link>
+                        <button className="pl-5 hover:text-black items-center hover:underline">
+                          SEEK (Australia)
+                        </button>
+                      </Link>
+                      <Link>
+                        <button className="pl-5 hover:text-black items-center hover:underline">
+                          Work Abroad (Philippines)
+                        </button>
+                      </Link>
+                    </div>
+                  </div>
+                </li>
+              )}
             </ul>
           </div>
           {/* Kontak */}
@@ -448,11 +553,96 @@ export const FooterKandidat = () => {
                   Kirim saran
                 </a>
               </li>
-              <li>
-                <a href="#" className="hover:text-black hover:underline">
-                  Media sosial
-                </a>
-              </li>
+              {/* Media sosial Dropdown */}
+              {hideMedia ? (
+                <li>
+                  <button
+                    onClick={() => handleClickMedia()}
+                    className="flex items-center gap-2 hover:text-black hover:underline"
+                  >
+                    Media sosial{" "}
+                    <span>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="15"
+                        height="10"
+                        viewBox="0 0 10 5"
+                        fill="none"
+                      >
+                        <path
+                          d="M9.36643 0L10 0.4925L5 5L0 0.4925L0.633571 0L5 3.93625L9.36643 0Z"
+                          fill="#828282"
+                        />
+                      </svg>
+                    </span>
+                  </button>
+                </li>
+              ) : (
+                <li>
+                  <div className="flex flex-col gap-2">
+                    <button
+                      onClick={() => handleClickMedia()}
+                      className="flex items-center gap-2 hover:text-black hover:underline"
+                    >
+                      Media sosial{" "}
+                      <span className="rotate-180">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="15"
+                          height="10"
+                          viewBox="0 0 10 5"
+                          fill="none"
+                        >
+                          <path
+                            d="M9.36643 0L10 0.4925L5 5L0 0.4925L0.633571 0L5 3.93625L9.36643 0Z"
+                            fill="#828282"
+                          />
+                        </svg>
+                      </span>
+                    </button>
+                    <div className="flex flex-col gap-2">
+                      <Link>
+                        <button className="flex gap-2 pl-3 hover:text-black items-center hover:underline">
+                          <span>
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="20"
+                              height="20"
+                              viewBox="0 0 20 20"
+                              fill="none"
+                            >
+                              <path
+                                d="M11.6668 11.2498H13.7502L14.5835 7.9165H11.6668V6.24984C11.6668 5.3915 11.6668 4.58317 13.3335 4.58317H14.5835V1.78317C14.3118 1.74734 13.286 1.6665 12.2027 1.6665C9.94016 1.6665 8.3335 3.04734 8.3335 5.58317V7.9165H5.8335V11.2498H8.3335V18.3332H11.6668V11.2498Z"
+                                fill="#5A6881"
+                              />
+                            </svg>
+                          </span>
+                          Facebook
+                        </button>
+                      </Link>
+                      <Link>
+                        <button className="flex gap-2 pl-3 hover:text-black items-center hover:underline">
+                          <span>
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="18"
+                              height="18"
+                              viewBox="0 0 20 20"
+                              fill="none"
+                            >
+                              <path
+                                d="M18.7165 5.00016C18.0749 5.29183 17.3832 5.4835 16.6665 5.57516C17.3999 5.1335 17.9665 4.4335 18.2332 3.59183C17.5415 4.0085 16.7749 4.30016 15.9665 4.46683C15.3082 3.75016 14.3832 3.3335 13.3332 3.3335C11.3749 3.3335 9.77487 4.9335 9.77487 6.9085C9.77487 7.19183 9.8082 7.46683 9.86654 7.72516C6.89987 7.57516 4.2582 6.15016 2.49987 3.99183C2.19154 4.51683 2.01654 5.1335 2.01654 5.7835C2.01654 7.02516 2.64154 8.12516 3.6082 8.75016C3.01654 8.75016 2.46654 8.5835 1.9832 8.3335V8.3585C1.9832 10.0918 3.21654 11.5418 4.84987 11.8668C4.32548 12.0103 3.77495 12.0303 3.24154 11.9252C3.46788 12.6356 3.91115 13.2572 4.50905 13.7026C5.10695 14.148 5.82941 14.3949 6.57487 14.4085C5.31123 15.4089 3.74487 15.9496 2.1332 15.9418C1.84987 15.9418 1.56654 15.9252 1.2832 15.8918C2.86654 16.9085 4.74987 17.5002 6.76654 17.5002C13.3332 17.5002 16.9415 12.0502 16.9415 7.32516C16.9415 7.16683 16.9415 7.01683 16.9332 6.8585C17.6332 6.3585 18.2332 5.72516 18.7165 5.00016Z"
+                                fill="#5A6881"
+                              />
+                            </svg>
+                          </span>
+                          Twitter
+                        </button>
+                      </Link>
+                    </div>
+                  </div>
+                </li>
+              )}
             </ul>
           </div>
         </div>
