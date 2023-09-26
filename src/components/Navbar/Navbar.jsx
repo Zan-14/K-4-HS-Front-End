@@ -15,7 +15,7 @@ const Navbar = () => {
             Untuk Kandidat
           </Link>
           <Link
-            to=""
+            to="/register"
             className="px-5 py-2 bg-pink-600 text-slate-50 font-semibold rounded-lg"
           >
             Daftar
