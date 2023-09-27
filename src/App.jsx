@@ -1,10 +1,14 @@
-function App() {
+import { BrowserRouter } from "react-router-dom";
+import { NavbarKandidat } from "./components/Navbar/Navbar";
+import { FooterKandidat } from "./components/Footer/Footer";
 
+const App = () => {
   return (
-    <>
-    <h1 className='bg-black text-white'>Halo</h1>
-    </>
-  )
-}
+    <BrowserRouter>
+      <NavbarKandidat />
+      <FooterKandidat />
+    </BrowserRouter>
+  );
+};
 
-export default App
+export default App;
