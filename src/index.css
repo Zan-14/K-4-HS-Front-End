@@ -1,3 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Container */
+.container-rekrut {
+  width: 80%;
+  margin: auto;
+  min-height: 2000px;
+}
+
+/* Hero Section */
+
+.hero {
+  display: flex;
+  padding: 5em;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.content {
+  width: 40%;
+  margin-right: 5em;
+}
+
+.content h1 {
+  font-size: 45px;
+  color: #e60278;
+}
+
+.hero a {
+  margin-top: 2em;
+  width: 287px;
+  height: 47px;
+  background-color: #e60278;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+}
+
+.content p {
+  font-size: 20px;
+  margin-top: 1em;
+  font-weight: 600;
+  color: #e60278;
+}
+
+/* Section Perusahaan */
+
+.judul {
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 50px 0;
+}
+
+.image-perusahaan {
+  display: flex;
+  margin-bottom: 100px;
+  padding: 5em;
+}
+
+.thumbnail img {
+  width: 100%;
+}
+
+/* Section Alasan */
+
+.card {
+  display: flex;
+  justify-content: space-between;
+}
+
+.icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 30%;
+  margin-bottom: 100px;
+}
+
+.icons img {
+  width: 10em;
+}
+
+.icons h4 {
+  font-size: 1.3rem;
+  margin: 20px 0 10px;
+}
+
+/* Section Catatan */
+
+.catatan h3 {
+  font-size: 0.9rem;
+  text-align: center;
+  color: #757575;
+}
