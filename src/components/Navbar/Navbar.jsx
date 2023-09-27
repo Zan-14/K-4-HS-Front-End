@@ -48,7 +48,7 @@ const Navigation = () => {
 
 export const NavbarKandidat = () => {
   return (
-    <header className="w-full bg-white">
+    <header className="bg-white">
       <div className="flex justify-between items-center p-5 container mx-auto">
         <div className="flex items-center gap-5">
           <Link className="text-3xl font-extrabold  text-blue-900">
@@ -81,7 +81,7 @@ export const NavbarKandidat = () => {
         </div>
         <div className="space-x-6 flex items-center">
           <Link
-            to=""
+            to="/"
             className="border-2 border-blue-900 px-4 py-2 rounded-lg text-blue-900 font-semibold"
           >
             Untuk Perusahaan

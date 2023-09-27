@@ -8,6 +8,7 @@ export default {
     extend: {
       colors: {
         'textGray': "#666666",
+        'bgGray': "#F7F8FB",
         'pink-1000': "#e60278",
 
       },

@@ -1,8 +1,11 @@
+import { Link } from "react-router-dom";
+
 export const HomeSearchSectionKandidat = () => {
   return (
     <div>
       {/* background image */}
-      <div className="flex justify-center items-center bg-[url('public/assets/HomeBanner.png')] py-20 bg-cover">
+      {/* Search section */}
+      <div className="flex items-center bg-[url('public/assets/HomeBanner.png')] py-20 justify-center bg-cover">
         <div className="flex flex-col">
           <p className="text-white font-bold">
             Dapatkan pekerjaan yang berarti bagimu
@@ -28,7 +31,7 @@ export const HomeSearchSectionKandidat = () => {
               </div>
               <input
                 type="search"
-                className="w-72 h-10 px-2 placeholder-textGray"
+                className="w-96 h-12 px-2 placeholder-textGray"
                 placeholder="Jabatan, kata kunci, perusahaan"
               />
               <span className="px-3"></span>
@@ -53,7 +56,7 @@ export const HomeSearchSectionKandidat = () => {
               </div>
               <input
                 type="search"
-                className="w-72 h-10 px-2 placeholder-textGray"
+                className="w-96 h-12 px-2 placeholder-textGray"
                 placeholder="Daerah, kota atau kabupaten"
               />
               <span className="px-3"></span>
@@ -81,7 +84,7 @@ export const HomeSearchSectionKandidat = () => {
                 <select
                   name="job-type"
                   id="job-type"
-                  className="w-80 rounded-r-md text-textGray px-2"
+                  className="w-96 rounded-r-md text-textGray px-2"
                 >
                   <option value="">Semua spesialisasi pekerjaan</option>
                   <option value="arsitek">Arsitek</option>
@@ -95,7 +98,52 @@ export const HomeSearchSectionKandidat = () => {
           </div>
         </div>
       </div>
-      {/* pencarian terakhit */}
+      {/* Search history */}
+      {/* container */}
+      <div className="bg-white flex justify-center">
+        <div className="flex gap-5 items-center py-5 w-[1500px]">
+          {/* pencarian terakhir */}
+          <div>
+            <p className="font-bold">Pencarian terakhir</p>
+          </div>
+          {/* History 1 */}
+          <div className="border-l-2   border-slate-400 pl-8">
+            <div className="flex gap-3">
+              <span className="px-2 bg-[#12784F] bg-opacity-20 text-[#12784F] rounded-md">
+                9 Baru
+              </span>
+              <Link className="text-blue-500">desain furniture</Link>
+            </div>
+            <div>
+              <p>Semua lokasi</p>
+            </div>
+          </div>
+          {/* History 2 */}
+          <div className="border-l-2   border-slate-400 pl-8">
+            <div className="flex gap-3">
+              <span className="px-2 bg-[#12784F] bg-opacity-20 text-[#12784F] rounded-md">
+                2 Baru
+              </span>
+              <Link className="text-blue-500">Konselor</Link>
+            </div>
+            <div>
+              <p>Semua lokasi</p>
+            </div>
+          </div>
+          {/* History 3 */}
+          <div className="border-l-2   border-slate-400 pl-8">
+            <div className="flex gap-3">
+              <span className="px-2 bg-[#12784F] bg-opacity-20 text-[#12784F] rounded-md">
+                99+ Baru
+              </span>
+              <Link className="text-blue-500">HRD</Link>
+            </div>
+            <div>
+              <p>Semua lokasi</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
